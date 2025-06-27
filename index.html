@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário</title>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif ;
+    }
+    
+
+    fieldset {
+      width: 80%;
+      margin: 20px auto;
+      padding: 15px;
+    }
+
+    legend {
+      font-weight: bold;
+      padding: 0 10px;
+    }
+
+    .sub-fieldset {
+      width: 98%;
+      margin: 0 auto;
+      display: block;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    td {
+      padding: 8px;
+      vertical-align: top;
+    }
+
+    input, select {
+      width: 95%;
+      padding: 5px;
+    }
+
+    .linha-fieldsets {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px; }
+      
+
+    .mini-fieldset {
+      flex: 1px;
+    }
+    .mini-fieldset.sexo {
+      max-width: 100px;
+    }
+    .dados-nascimento {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      align-items: flex-start;
+    }
+    .campo {
+      flex: 1;
+      min-width: 120px;
+    }
+    label {
+      display:flex;
+      font-size: 14px;
+      margin-bottom: 3px;
+    }
+ 
+
+    .grupo-radio {
+
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      text-align: center;
+    }
+
+    
+  </style>
+</head>
+<body>
+
+  <h1><center>FORMULÁRIO</h1> </center>
+
+    <fieldset> 
+    <legend>DADOS PESSOAIS</legend>  
+
+    <fieldset class="sub-fieldset">
+      <legend>IDENTIFICAÇÃO</legend>
+
+      <table>
+        <tr>
+          <td colspan="4">
+            Nome Completo:<br>
+            <input type="text" name="nome">
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Nacionalidade:<br>
+            <select id="nacionalidade" name="nacionalidade" required>
+                  <option value="Brasileiro(a)">Brasileiro(a)</option>
+                  <option value="Estrangeiro(a)">Estrangeiro(a)</option>
+                </select>
+          </td>
+
+          <td>
+            CPF:<br>
+            <input type="text" name="cpf">
+          </td>
+
+          <td>
+            Número do Passaporte:<br>
+            <input type="text" name="passaporte">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <div class="linha-fieldsets">
+      
+      <fieldset class="mini-fieldset">
+
+        <legend>DADOS DE NASCIMENTO</legend>
+        <div class="dados-nascimento">
+
+          <div class="campo">
+            <label>País:</label>
+            <select> 
+             <option value="">Selecione um país</option>
+              <option value="Afeganistão">Afeganistão</option>
+              <option value="África do Sul">África do Sul</option>
+              <option value="Albânia">Albânia</option>
+              <option value="Alemanha">Alemanha</option>
+              <option value="Andorra">Andorra</option>
+              <option value="Angola">Angola</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Armênia">Armênia</option>
+              <option value="Austrália">Austrália</option>
+              <option value="Áustria">Áustria</option>
+              <option value="Bahamas">Bahamas</option>
+              <option value="Bangladesh">Bangladesh</option>
+              <option value="Bélgica">Bélgica</option>
+              <option value="Bolívia">Bolívia</option>
+              <option value="Brasil" selected>Brasil</option>
+              <option value="Bulgária">Bulgária</option>
+              <option value="Cabo Verde">Cabo Verde</option>
+              <option value="Camarões">Camarões</option>
+              <option value="Canadá">Canadá</option>
+              <option value="Chile">Chile</option>
+              <option value="China">China</option>
+              <option value="Colômbia">Colômbia</option>
+              <option value="Coreia do Sul">Coreia do Sul</option>
+              <option value="Costa Rica">Costa Rica</option>
+              <option value="Cuba">Cuba</option>
+              <option value="Dinamarca">Dinamarca</option>
+              <option value="Egito">Egito</option>
+              <option value="Equador">Equador</option>
+              <option value="Espanha">Espanha</option>
+              <option value="Estados Unidos">Estados Unidos</option>
+              <option value="Filipinas">Filipinas</option>
+              <option value="Finlândia">Finlândia</option>
+              <option value="França">França</option>
+              <option value="Grécia">Grécia</option>
+              <option value="Guatemala">Guatemala</option>
+              <option value="Honduras">Honduras</option>
+              <option value="Índia">Índia</option>
+              <option value="Indonésia">Indonésia</option>
+              <option value="Inglaterra">Inglaterra</option>
+              <option value="Irlanda">Irlanda</option>
+              <option value="Islândia">Islândia</option>
+              <option value="Israel">Israel</option>
+              <option value="Itália">Itália</option>
+              <option value="Jamaica">Jamaica</option>
+              <option value="Japão">Japão</option>
+              <option value="Líbano">Líbano</option>
+              <option value="Luxemburgo">Luxemburgo</option>
+              <option value="México">México</option>
+              <option value="Moçambique">Moçambique</option>
+              <option value="Nigéria">Nigéria</option>
+              <option value="Noruega">Noruega</option>
+              <option value="Nova Zelândia">Nova Zelândia</option>
+              <option value="Países Baixos">Países Baixos</option>
+              <option value="Panamá">Panamá</option>
+              <option value="Paraguai">Paraguai</option>
+              <option value="Peru">Peru</option>
+              <option value="Polônia">Polônia</option>
+              <option value="Portugal">Portugal</option>
+              <option value="Quênia">Quênia</option>
+              <option value="Reino Unido">Reino Unido</option>
+              <option value="República Dominicana">República Dominicana</option>
+              <option value="Romênia">Romênia</option>
+              <option value="Rússia">Rússia</option>
+              <option value="Suécia">Suécia</option>
+              <option value="Suíça">Suíça</option>
+              <option value="Tailândia">Tailândia</option>
+              <option value="Turquia">Turquia</option>
+              <option value="Ucrânia">Ucrânia</option>
+              <option value="Uruguai">Uruguai</option>
+              <option value="Vaticano">Vaticano</option>
+              <option value="Venezuela">Venezuela</option>
+              <option value="Vietnã">Vietnã</option>
+              <option value="Zâmbia">Zâmbia</option>
+              <option value="Zimbábue">Zimbábue</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label>UF:</label>
+            <select>
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MS">MS</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label>Cidade:</label>
+            <input type="text">
+          </div>
+          <div class="campo">
+            <label>Data:</label>
+            <input type="date">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="mini-fieldset sexo">
+        <legend>Sexo</legend>
+        <label><input type="radio" name="sexo" value="f"> Feminino</label><br>
+        <label><input type="radio" name="sexo" value="m"> Masculino</label>
+      </fieldset>
+
+    </div>
+
+    
+    <fieldset class="sub-fieldset">
+        <legend> IDENTIDADE</legend>
+
+        <table>
+      <tr>
+
+        <td> Número:<br>
+            <input type="text" name="numero"> 
+            </td>
+
+        <td>Orgão Emissor:<br>
+         <input type="text" name="orgaoemissor">
+         </td>
+         
+         <td>
+         UF:
+            <select>
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MS">MS</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+            </select>
+            </td>
+
+         <td>Data:</label>
+            <input type="date" name="data">
+            </td>
+
+      </tr>
+     </table> 
+      </fieldset>
+
+    <br>
+
+      <fieldset class="sub-fieldset">
+        <legend> FILIAÇÃO</legend>
+
+        <table>
+        <tr>
+          <td colspan="4">
+            Nome da mãe:<br>
+            <input type="text" name="nome">
+          </td>
+        </tr>
+          <td colspan="4">
+            Nome do pai:<br>
+            <input type="text" name="nome">
+          </td>
+        </tr>
+        </table>
+
+      </fieldset>
+     
+  </fieldset>
+
+  <fieldset> 
+    <legend> ENDEREÇO</legend>
+
+  <fieldset class="sub-fieldset"> 
+    <legend> ENDEREÇO PROFISSIONAL</legend>
+
+    <table>
+      <tr>
+        <td colspan="4"> Instituição/empresa:<br>
+            <input type="text" name="nome">
+            </td>
+      </tr>
+
+      <tr> 
+        <td>
+          Logradouro:
+              <select id="logradouro" name="logradouro">
+                <option value="">Selecione</option>
+                <option value="Avenida">Avenida</option>
+                <option value="Rua">Rua</option>
+                <option value="Praça">Praça</option>
+                <option value="Travessa">Travessa</option>
+                <option value="Alameda">Alameda</option>
+                <option value="Beco">Beco</option>
+                <option value="Passagem">Passagem</option>
+                <option value="Estrada">Estrada</option>
+                <option value="Rodovia">Rodovia</option>
+                <option value="Via">Via</option>
+                <option value="Largo">Largo</option>
+              </select>
+        </td>
+        <td colspan="2">
+          Endereço:
+          <input type="text" name="endereço">
+         </td>
+         
+         <td>
+          bairro:
+          <input type="text" name="bairro">
+         </td>
+      </tr>
+
+      <tr>
+        <td> 
+          País:
+          <select> 
+             <option value="">Selecione um país</option>
+              <option value="Afeganistão">Afeganistão</option>
+              <option value="África do Sul">África do Sul</option>
+              <option value="Albânia">Albânia</option>
+              <option value="Alemanha">Alemanha</option>
+              <option value="Andorra">Andorra</option>
+              <option value="Angola">Angola</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Armênia">Armênia</option>
+              <option value="Austrália">Austrália</option>
+              <option value="Áustria">Áustria</option>
+              <option value="Bahamas">Bahamas</option>
+              <option value="Bangladesh">Bangladesh</option>
+              <option value="Bélgica">Bélgica</option>
+              <option value="Bolívia">Bolívia</option>
+              <option value="Brasil" selected>Brasil</option>
+              <option value="Bulgária">Bulgária</option>
+              <option value="Cabo Verde">Cabo Verde</option>
+              <option value="Camarões">Camarões</option>
+              <option value="Canadá">Canadá</option>
+              <option value="Chile">Chile</option>
+              <option value="China">China</option>
+              <option value="Colômbia">Colômbia</option>
+              <option value="Coreia do Sul">Coreia do Sul</option>
+              <option value="Costa Rica">Costa Rica</option>
+              <option value="Cuba">Cuba</option>
+              <option value="Dinamarca">Dinamarca</option>
+              <option value="Egito">Egito</option>
+              <option value="Equador">Equador</option>
+              <option value="Espanha">Espanha</option>
+              <option value="Estados Unidos">Estados Unidos</option>
+              <option value="Filipinas">Filipinas</option>
+              <option value="Finlândia">Finlândia</option>
+              <option value="França">França</option>
+              <option value="Grécia">Grécia</option>
+              <option value="Guatemala">Guatemala</option>
+              <option value="Honduras">Honduras</option>
+              <option value="Índia">Índia</option>
+              <option value="Indonésia">Indonésia</option>
+              <option value="Inglaterra">Inglaterra</option>
+              <option value="Irlanda">Irlanda</option>
+              <option value="Islândia">Islândia</option>
+              <option value="Israel">Israel</option>
+              <option value="Itália">Itália</option>
+              <option value="Jamaica">Jamaica</option>
+              <option value="Japão">Japão</option>
+              <option value="Líbano">Líbano</option>
+              <option value="Luxemburgo">Luxemburgo</option>
+              <option value="México">México</option>
+              <option value="Moçambique">Moçambique</option>
+              <option value="Nigéria">Nigéria</option>
+              <option value="Noruega">Noruega</option>
+              <option value="Nova Zelândia">Nova Zelândia</option>
+              <option value="Países Baixos">Países Baixos</option>
+              <option value="Panamá">Panamá</option>
+              <option value="Paraguai">Paraguai</option>
+              <option value="Peru">Peru</option>
+              <option value="Polônia">Polônia</option>
+              <option value="Portugal">Portugal</option>
+              <option value="Quênia">Quênia</option>
+              <option value="Reino Unido">Reino Unido</option>
+              <option value="República Dominicana">República Dominicana</option>
+              <option value="Romênia">Romênia</option>
+              <option value="Rússia">Rússia</option>
+              <option value="Suécia">Suécia</option>
+              <option value="Suíça">Suíça</option>
+              <option value="Tailândia">Tailândia</option>
+              <option value="Turquia">Turquia</option>
+              <option value="Ucrânia">Ucrânia</option>
+              <option value="Uruguai">Uruguai</option>
+              <option value="Vaticano">Vaticano</option>
+              <option value="Venezuela">Venezuela</option>
+              <option value="Vietnã">Vietnã</option>
+              <option value="Zâmbia">Zâmbia</option>
+              <option value="Zimbábue">Zimbábue</option>
+            </select>
+
+        </td>
+
+        <td>
+          UF:
+          <select>
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MS">MS</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+            </select>
+
+        </td>
+
+        <td> 
+          Cidade:
+          <input type="text" name="cidade">
+        </td>
+
+        <td> CEP:
+          <input type="text">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          DDD: 
+          <input type="text"> 
+        </td>
+
+        <td>
+          telefone:
+          <input type="text">
+        </td>
+
+        <td>
+          Ramal:
+          <input type="text">
+        </td>
+
+        <td>
+          Fax:
+          <input type="text">
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="3">
+          Email:
+          <input type="text">
+        </td>
+        
+        <td colspan="2">
+          Homepage Institucional:
+          <input type="text">
+        </td>
+      </tr>
+    </table>
+    
+  </fieldset> <br>
+
+  <fieldset class="sub-fieldset">
+    <legend> ENDEREÇO RESIDENCIAL </legend>
+
+    <table>
+
+       <tr> 
+        <td>
+          Logradouro:
+              <select id="logradouro" name="logradouro">
+                <option value="">Selecione</option>
+                <option value="Avenida">Avenida</option>
+                <option value="Rua">Rua</option>
+                <option value="Praça">Praça</option>
+                <option value="Travessa">Travessa</option>
+                <option value="Alameda">Alameda</option>
+                <option value="Beco">Beco</option>
+                <option value="Passagem">Passagem</option>
+                <option value="Estrada">Estrada</option>
+                <option value="Rodovia">Rodovia</option>
+                <option value="Via">Via</option>
+                <option value="Largo">Largo</option>
+              </select>
+        </td>
+        <td colspan="2">
+          Endereço:
+          <input type="text" name="endereço">
+         </td>
+         
+         <td>
+          bairro:
+          <input type="text" name="bairro">
+         </td>
+      </tr>
+
+      <tr>
+        <td> 
+          País:
+          <select> 
+             <option value="">Selecione um país</option>
+              <option value="Afeganistão">Afeganistão</option>
+              <option value="África do Sul">África do Sul</option>
+              <option value="Albânia">Albânia</option>
+              <option value="Alemanha">Alemanha</option>
+              <option value="Andorra">Andorra</option>
+              <option value="Angola">Angola</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Armênia">Armênia</option>
+              <option value="Austrália">Austrália</option>
+              <option value="Áustria">Áustria</option>
+              <option value="Bahamas">Bahamas</option>
+              <option value="Bangladesh">Bangladesh</option>
+              <option value="Bélgica">Bélgica</option>
+              <option value="Bolívia">Bolívia</option>
+              <option value="Brasil" selected>Brasil</option>
+              <option value="Bulgária">Bulgária</option>
+              <option value="Cabo Verde">Cabo Verde</option>
+              <option value="Camarões">Camarões</option>
+              <option value="Canadá">Canadá</option>
+              <option value="Chile">Chile</option>
+              <option value="China">China</option>
+              <option value="Colômbia">Colômbia</option>
+              <option value="Coreia do Sul">Coreia do Sul</option>
+              <option value="Costa Rica">Costa Rica</option>
+              <option value="Cuba">Cuba</option>
+              <option value="Dinamarca">Dinamarca</option>
+              <option value="Egito">Egito</option>
+              <option value="Equador">Equador</option>
+              <option value="Espanha">Espanha</option>
+              <option value="Estados Unidos">Estados Unidos</option>
+              <option value="Filipinas">Filipinas</option>
+              <option value="Finlândia">Finlândia</option>
+              <option value="França">França</option>
+              <option value="Grécia">Grécia</option>
+              <option value="Guatemala">Guatemala</option>
+              <option value="Honduras">Honduras</option>
+              <option value="Índia">Índia</option>
+              <option value="Indonésia">Indonésia</option>
+              <option value="Inglaterra">Inglaterra</option>
+              <option value="Irlanda">Irlanda</option>
+              <option value="Islândia">Islândia</option>
+              <option value="Israel">Israel</option>
+              <option value="Itália">Itália</option>
+              <option value="Jamaica">Jamaica</option>
+              <option value="Japão">Japão</option>
+              <option value="Líbano">Líbano</option>
+              <option value="Luxemburgo">Luxemburgo</option>
+              <option value="México">México</option>
+              <option value="Moçambique">Moçambique</option>
+              <option value="Nigéria">Nigéria</option>
+              <option value="Noruega">Noruega</option>
+              <option value="Nova Zelândia">Nova Zelândia</option>
+              <option value="Países Baixos">Países Baixos</option>
+              <option value="Panamá">Panamá</option>
+              <option value="Paraguai">Paraguai</option>
+              <option value="Peru">Peru</option>
+              <option value="Polônia">Polônia</option>
+              <option value="Portugal">Portugal</option>
+              <option value="Quênia">Quênia</option>
+              <option value="Reino Unido">Reino Unido</option>
+              <option value="República Dominicana">República Dominicana</option>
+              <option value="Romênia">Romênia</option>
+              <option value="Rússia">Rússia</option>
+              <option value="Suécia">Suécia</option>
+              <option value="Suíça">Suíça</option>
+              <option value="Tailândia">Tailândia</option>
+              <option value="Turquia">Turquia</option>
+              <option value="Ucrânia">Ucrânia</option>
+              <option value="Uruguai">Uruguai</option>
+              <option value="Vaticano">Vaticano</option>
+              <option value="Venezuela">Venezuela</option>
+              <option value="Vietnã">Vietnã</option>
+              <option value="Zâmbia">Zâmbia</option>
+              <option value="Zimbábue">Zimbábue</option>
+            </select>
+
+        </td>
+
+               <td>
+          UF:
+          <select>
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MS">MS</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+            </select>
+
+        </td>
+
+        <td> 
+          Cidade:
+          <input type="text" name="cidade">
+        </td>
+
+        <td> CEP:
+          <input type="text">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          DDD: 
+          <input type="text"> 
+        </td>
+
+        <td>
+          telefone:
+          <input type="text">
+        </td>
+
+        <td>
+          Ramal:
+          <input type="text">
+        </td>
+
+        <td>
+          Fax:
+          <input type="text">
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="3">
+          Email:
+          <input type="text">
+        </td>
+        
+        <td colspan="2">
+          Homepage Institucional:
+          <input type="text">
+        </td>
+      </tr>
+
+
+    </table>
+
+
+
+  </fieldset> <br>
+  <fieldset class="sub-fieldset">
+
+  <legend> ENDEREÇO PREFERÊNCIAL PARA CORRESPONDÊNCIA </legend>
+       
+  <label class="grupo-radio">
+       <input  type="radio" name="sexo" value="r"> Residêncial
+     <input  type="radio" name="sexo" value="p">Profissional
+ </label>
+
+   </fieldset>
+
+  </fieldset>
+
+  <fieldset>
+    <legend>FORMAÇÃO ACADÊMICA/TITULAÇÃO</legend>
+
+    <fieldset class="sub-fieldset"> 
+      <legend> FORMAÇÃO</legend>
+
+      <table>
+        <tr>
+          <td>
+            Maior nível de formação:
+            <select>
+              <option value="Graduação">Graduação</option>
+              <option value="Aperfeiçoamento">Aperfeiçoamento</option>
+              <option value="Especialização">Especialização</option>
+              <option value="Mestrado">Mestrado</option>
+              <option value="Doutorado">Doutorado</option>
+                
+            </select>
+          </td>
+
+          <td>
+            Carga horária:
+            <input type="text">
+          </td>
+        </tr>
+
+      </table>
+
+    </fieldset> <br>
+
+    <fieldset class="sub-fieldset"> 
+      <legend>INSTITUIÇÃO/CURSO</legend>
+
+      <table>
+        <tr>
+          <td colspan="3">
+            Instituição: 
+            <input type="text">
+          </td>
+
+          <td colspan="1">
+            Nome do Curso:
+            <input type="text">
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Status do curso:
+            <select>
+               <option value="andamento">Em andamento</option>
+               <option value="títuloobtido"> Com título obtido</option>
+            </select>
+          </td>
+
+          <td> 
+            Período (ano):
+            <input type="text">
+          </td>
+
+          <td>
+            Início:
+            <input type="text">
+          </td>
+
+          <td>
+            Conclusão:
+            <input type="text">
+          </td>
+
+           </tr>
+           <tr>
+          <td colspan="2">
+            Obtenção do título:
+            <input type="text">
+          </td>
+
+          <td colspan="2">
+            Título da Monografia/Disseratação/Tese:
+            <input type="text"> 
+          </td>
+          
+           </tr>
+          <tr> 
+          <td colspan="4">
+            Nome Completo do Orientador:
+            <input type="text">
+          </td>
+          </tr>
+
+            <td colspan="5"> 
+              Entidade Financeira:
+              <input type="text">
+            </td>
+          </tr>
+       
+      </table>
+
+      <label class="grupo-radio">
+          <tr>
+       
+       &nbsp;&nbsp;Bolsa: 
+        <td><input type="radio" name="bolsa"> Sim </td>
+       <input type="radio" name="bolsa"> Não
+          </label>
+
+    </fieldset>
+  </fieldset>
+
+  <fieldset>
+    <legend> ATUAÇÃO PROFISSIONAL </legend>
+
+      <fieldset class="sub-fieldset">
+        <legend>INSTITUIÇÃO DE TRABALHO</legend>
+
+        <table>
+          <tr>
+            <td >
+              Instituição/Empresa:
+              <input type="text">
+            </td>
+ 
+
+            <td >
+              Sigla:
+              <input type="text">
+            </td>
+          </tr>
+        </table>
+
+          <fieldset class="sub-fieldset"> 
+
+            <legend> ATIVIDADE(S) EXERCIDA(S) NA INSTITIÇÃO </legend> 
+
+           
+             <table>
+                <tr>
+                <td><input type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Conselhos, comissões e consultoria </td>
+                <td><input type="checkbox"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Direção e administração </td>
+                <td><input type="checkbox">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensino </td>
+
+                <td><input type="checkbox"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Estágio </td>
+                  </tr>
+
+              </table>
+
+              <table> <br> <br>
+
+                <tr>
+                <td><input type="checkbox"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Extensão universitária</td>
+                <td><input type="checkbox"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pesquisa e desenvolvimento </td>
+                <td><input type="checkbox"> Serviços técnicos e especializados </td>
+                <td><input type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Treinamentos ministrados </td>
+                </tr>
+                <tr>
+                </table> <br> <br>
+
+                <table>
+                <td><input type="checkbox"> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;Outras atividades técnico-científicas </td>
+               </tr>
+              </table>
+          </fieldset>
+
+      </fieldset>
+
+    
+
+      <fieldset class="sub-fieldset">
+        <legend> VÍNCULO INSTITUCIONAL</legend>
+   
+        &nbsp; <label class="grupo-radio">
+          <tr>
+       
+         Periodo: 
+        <td><input type="radio" name="Periodo"> Anterior
+             <input type="radio" name="Periodo"> Atual </td>
+          </label>
+          <br>
+
+   <table>
+   
+    <td>
+       inicio:
+       <input type="date">
+
+    </td>
+      <td>
+        Fim:
+        <input type="date">
+      </td>
+
+    </tr>
+
+    <tr>
+      <td>
+      Tipo de Vínculo:
+      <select>
+        <option value="ServidorPublico">Servidor Público </option>
+        <option value="Celetista">Celetista </option>
+        <option value="Outro">Outro </option>
+      </select>
+      </td>
+
+      <td>
+        carga horária semanal:
+        <input type="text">
+      </td>
+    </tr>
+   </table>
+
+
+      </fieldset>
+       
+
+
+
+
+
+  </fieldset>
+
+  
